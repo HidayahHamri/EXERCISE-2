@@ -7,12 +7,15 @@ class MainBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(children: [
-        Icon(Icons.access_alarm,
-            color: Color.fromRGBO(_state.red.round(), _state.green.round(),
-                _state.blue.round(), 1.0),
-            size: _state.size),
-      ]),
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.access_alarm,
+                color: Color.fromRGBO(_state.red.round(), _state.green.round(),
+                    _state.blue.round(), 1.0),
+                size: _state.size),
+          ]),
     );
   }
 }
