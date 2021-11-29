@@ -12,15 +12,15 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   var _size = 200.0;
   get size => _size;
-  set size(value) => _size = value;
+  set size(value) => setState(() => _size = value);
 
   var _red = 0.0;
   get red => _red;
-  set red(value) => _red = value;
+  set red(value) => setState(() => _red = value);
 
   var _green = 0.0;
   get green => _green;
-  set green(value) => _green = value;
+  set green(value) => setState(() => _green = value);
 
   var _blue = 0.0;
   get blue => _blue;
