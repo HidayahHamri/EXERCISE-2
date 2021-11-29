@@ -15,12 +15,12 @@ class MainBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 180.0,
+        height: 180,
         child: Padding(
             padding: const EdgeInsets.fromLTRB(5, 5, 5, 0),
             child: Column(children: [
               Row(
-                //red
+                // red
                 children: [
                   Slider(
                       value: _redslider,
@@ -54,12 +54,12 @@ class MainBottomBar extends StatelessWidget {
                 ],
               ),
               Row(
-                //green
+                // green
                 children: [
                   Slider(
                       value: _greenslider,
-                      min: 0,
-                      max: 255,
+                      min: 0.0,
+                      max: 255.0,
                       onChanged: (double value) {
                         setState(() {
                           _greenslider = value;
@@ -87,21 +87,20 @@ class MainBottomBar extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                //blue
-                children: [
-                  Slider(
-                      value: _blueslider,
-                      min: 0,
-                      max: 255,
-                      onChanged: (double value) {
-                        setState(() {
-                          _blueslider = value;
-                          _state.value = _blueslider.toInt();
-                        });
-                      }),
-                  Center(
-                    child: Visibility(
+              Row(// blue
+                  children: [
+                Slider(
+                    value: _blueslider,
+                    min: 0.0,
+                    max: 255.0,
+                    onChanged: (double value) {
+                      setState(() {
+                        _blueslider = value;
+                        _state.value = _blueslider.toInt();
+                      });
+                    }),
+                Center(
+                  child: Visibility(
                       visible: _drawItem,
                       child: FloatingActionButton.extended(
                         onPressed: () {
@@ -112,15 +111,13 @@ class MainBottomBar extends StatelessWidget {
                         label: Text(_state.blue.round().toString()),
                         shape: CircleBorder(),
                         backgroundColor: Colors.blue,
-                      ),
-                    ),
-                  ),
-                  Visibility(
-                    visible: !_drawItem,
-                    child: Text(_state.blue.round().toString()),
-                  ),
-                ],
-              ),
+                      )),
+                ),
+                Visibility(
+                  visible: !_drawItem,
+                  child: Text(_state.blue.round().toString()),
+                )
+              ])
             ])));
   }
 
