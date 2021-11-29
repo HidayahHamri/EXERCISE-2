@@ -16,7 +16,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Visibility(
       visible: _drawItem,
       child: IconButton(
-          padding: EdgeInsets.fromLTRB(1, 0, 0, 0),
+          padding: EdgeInsets.fromLTRB(1, 1, 0, 0),
           icon: Container(
             alignment: Alignment.center,
             child: Text(_icon),
