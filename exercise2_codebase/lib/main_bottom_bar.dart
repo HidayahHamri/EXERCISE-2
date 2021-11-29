@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MainBottomBar extends StatelessWidget {
   final _state, _drawItem;
   var _redslider = 0.0;
@@ -36,8 +37,8 @@ class MainBottomBar extends StatelessWidget {
                       child: FloatingActionButton.extended(
                         onPressed: () {
                           _state.red = 255.0;
-                          _state.blue = 0.0;
                           _state.green = 0.0;
+                          _state.blue = 0.0;
                         },
                         label: Text(_state.red.round().toString()),
                         shape: CircleBorder(),
