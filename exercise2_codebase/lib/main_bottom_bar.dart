@@ -123,6 +123,6 @@ class MainBottomBar extends StatelessWidget {
               ),
             ])));
   }
-}
 
-void setState(Null Function() param0) {}
+  void setState(Null Function() param0) {}
+}
